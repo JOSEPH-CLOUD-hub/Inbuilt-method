@@ -41,19 +41,28 @@
 
 // join method
 
-let fullName = "babalola joseph";
-let splitNames = fullName.split(" ");
-let firstName = splitNames[0];
-let lastName = splitNames[1];
-let modifiedFullName;
+// let fullName = "babalola joseph";
+// let splitNames = fullName.split(" ");
+// let firstName = splitNames[0];
+// let lastName = splitNames[1];
+// let modifiedFullName;
 
-if (firstName != NaN && lastName != NaN) {
-  let modifiedFirstName =
-    firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase();
-  let modifiedLastName =
-    lastName.charAt(0).toUpperCase() + lastName.slice(1).toLowerCase();
-  modifiedFullName = `Full name is: ${modifiedFirstName} ${modifiedLastName}`;
-  console.log(modifiedFullName);
-} else {
-  console.log("There's issues w your name.");
+// if (firstName != NaN && lastName != NaN) {
+//   let modifiedFirstName =
+//     firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase();
+//   let modifiedLastName =
+//     lastName.charAt(0).toUpperCase() + lastName.slice(1).toLowerCase();
+//   modifiedFullName = `Full name is: ${modifiedFirstName} ${modifiedLastName}`;
+//   console.log(modifiedFullName);
+// } else {
+//   console.log("There's issues w your name.");
+// }
+
+
+let username = prompt("Enter your username:").toLowerCase();
+let words = username.split(' ');
+for (let i = 0; i < words.length; i++) {
+  words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
 }
+let titleCaseName = words.join(' ');
+alert(titleCaseName);
